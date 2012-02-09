@@ -1,0 +1,46 @@
+$def with(h1, b1, h2, b2)
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Response</title>
+    <style>
+    *{font-size:12px;}
+    body{padding:0;margin:0;}
+    h3{font-size:16px;margin:5px 0;}
+    h5{font-size:14px;margin:5px 0;}
+    #left{float:left;width:50%;background:#FFC;min-height:600px;}
+    #right{float:left;width:50%;background:#DFD;min-height:600px;}
+    #request{padding-left:10px;}
+    #response{padding-left:10px;}
+    </style>
+  </head>
+  <body>
+<div id="left">
+<div id="request">
+  <h5>Request</h5>
+<pre>
+$h1
+</pre>
+  <h5>Body</h5>
+<pre>
+$b1
+</pre>
+</div>
+</div>
+
+<div id="right">
+<div id="response">
+  <h5>Response</h5>
+<pre>
+$h2
+</pre>
+  <h5>Body</h5>
+<pre>
+$b2
+</pre>
+</div>
+</div>
+  </body>
+</html>

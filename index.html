@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Request</title>
+    <style>
+    td *{font-size:12px;}
+    </style>
+  </head>
+  <body>
+    <form method="POST" action="/request">
+      <table>
+        <tr>
+          <th>URL</th>
+          <td><input size="50" type="text" name="url"></td>
+        </tr>
+        <tr>
+          <th>Method</th>
+          <td>
+            <select name="method">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="DELETE">DELETE</option>
+              <option value="HEAD">HEAD</option>
+            </td>
+        </tr>
+        <tr>
+          <th>Headers</th>
+          <td><textarea name="headers" cols="40" rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <th>Body</th>
+          <td><textarea name="body" cols="40" rows="10"></textarea></td>
+        </tr>
+      </table>
+      <div>
+        <button>Submit</button>
+      </div>
+  </body>
+</html>

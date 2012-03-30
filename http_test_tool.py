@@ -18,9 +18,10 @@ class Request(object):
     path = form_data.url[form_data.url.find(host) + len(host):]
     headers = {}
     for line in form_data.headers.splitlines():
-      k, v = line.split(':')
+      k = line[:line.index(':')]
+      v = line[line.index(':')+2:]
       headers[k.strip()] = v.strip()
-    conn.request(form_data.method, path, form_data.body, headers)
+    conn.request(form_data.method, path, form_data.body.encode("utf-8"), headers)
     response = conn.getresponse()
     response_headers = response.getheaders()
     headers = "HTTP %s %s\n" % (response.status, response.reason)
